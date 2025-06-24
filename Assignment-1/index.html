@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let value1 = 5678;
+      // let value2 = 1234;
+      // let value3 = 4567;
+      // let value4 = 8901;
+      // let value5 = 2345;
+
+      // let userInput = window.prompt(`Please enter your value:`);
+      // if (value1 == userInput) {
+      //   let userResponse = window.confirm(
+      //     "Do you want us to open the requested website"
+      //   );
+      //   if (userResponse == true) {
+      //     window.location.assign("https://www.google.com");
+      //   } else if (userResponse == false) {
+      //     window.alert("you are not eligible");
+      //   }
+      // } else if (value2 == userInput) {
+      //   let userResponse = window.confirm(
+      //     "Do you want us to open the requested website"
+      //   );
+      //   if (userResponse == true) {
+      //     window.location.assign("https://www.yahoo.com");
+      //   } else if (userResponse == false) {
+      //     window.alert("you are not eligible");
+      //   }
+      // } else if (value3 == userInput) {
+      //   let userResponse = window.confirm(
+      //     "Do you want us to open the requested website"
+      //   );
+      //   if (userResponse == true) {
+      //     window.location.assign("https://www.facebook.com");
+      //   } else if (userResponse == false) {
+      //     window.alert("you are not eligible");
+      //   }
+      // } else if (value4 == userInput) {
+      //   let userResponse = window.confirm(
+      //     "Do you want us to open the requested website"
+      //   );
+      //   if (userResponse == true) {
+      //     window.location.assign("https://www.instagram.com");
+      //   } else if (userResponse == false) {
+      //     window.alert("you are not eligible");
+      //   }
+      // } else if (value5 == userInput) {
+      //   let userResponse = window.confirm(
+      //     "Do you want us to open the requested website"
+      //   );
+      //   if (userResponse == true) {
+      //     window.location.assign("https://www.gmail.com");
+      //   } else if (userResponse == false) {
+      //     window.alert("you are not eligible");
+      //   }
+      // } else {
+      //   userInput = window.prompt(
+      //     "Your value is incorrect, Please re-enter your value"
+      //   );
+      //   if (value1 == userInput) {
+      //     let userResponse = window.confirm(
+      //       "Do you want us to open the requested website"
+      //     );
+      //     if (userResponse == true) {
+      //       window.location.assign("https://www.google.com");
+      //     } else if (userResponse == false) {
+      //       window.alert("you are not eligible");
+      //     }
+      //   } else if (value2 == userInput) {
+      //     let userResponse = window.confirm(
+      //       "Do you want us to open the requested website"
+      //     );
+      //     if (userResponse == true) {
+      //       window.location.assign("https://www.yahoo.com");
+      //     } else if (userResponse == false) {
+      //       window.alert("you are not eligible");
+      //     }
+      //   } else if (value3 == userInput) {
+      //     let userResponse = window.confirm(
+      //       "Do you want us to open the requested website"
+      //     );
+      //     if (userResponse == true) {
+      //       window.location.assign("https://www.facebook.com");
+      //     } else if (userResponse == false) {
+      //       window.alert("you are not eligible");
+      //     }
+      //   } else if (value4 == userInput) {
+      //     let userResponse = window.confirm(
+      //       "Do you want us to open the requested website"
+      //     );
+      //     if (userResponse == true) {
+      //       window.location.assign("https://www.instagram.com");
+      //     } else if (userResponse == false) {
+      //       window.alert("you are not eligible");
+      //     }
+      //   } else if (value5 == userInput) {
+      //     let userResponse = window.confirm(
+      //       "Do you want us to open the requested website"
+      //     );
+      //     if (userResponse == true) {
+      //       window.location.assign("https://www.gmail.com");
+      //     } else if (userResponse == false) {
+      //       window.alert("you are not eligible");
+      //     }
+      //   }
+      // }
+
+      // Using ternary operator-------------
+
+      let values = {
+        5678: "https://www.google.com",
+        1234: "https://www.yahoo.com",
+        4567: "https://www.facebook.com",
+        8901: "https://www.instagram.com",
+        2345: "https://www.gmail.com",
+      };
+
+      let inputValue = window.prompt("Please enter your value");
+      let url = values[inputValue];
+      if (!url) {
+        userInput = window.prompt(
+          "Your value is incorrect, Please re-enter your value"
+        );
+        let url = values[inputValue];
+      }
+      url
+        ? window.confirm("Do you want us to open the requested website")
+          ? window.location.assign(url)
+          : window.alert("you are not eligible")
+        : null;
+    </script>
+  </body>
+</html>
