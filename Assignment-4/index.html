@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="inputContainer">
+      <input
+        class="input"
+        placeholder="User Name"
+        type="text"
+        name="User Name"
+      />
+      <input class="input" placeholder="Password" type="text" name="Password" />
+      <button id="btn">Submit</button>
+    </div>
+    <script>
+      let loginDetails = {
+        User_Name: "AnitaKumari",
+        Password: "FrontendDeveloper",
+      };
+      let submitBtn = document.getElementById("btn");
+      submitBtn.addEventListener("click", () => {
+        let enteredUserName = document.getElementsByClassName("input")[0].value;
+        console.log(enteredUserName);
+        let enteredPwd = document.getElementsByClassName("input")[1].value;
+        console.log(enteredPwd);
+        if (
+          enteredUserName == loginDetails.User_Name &&
+          enteredPwd == loginDetails.Password
+        ) {
+          alert("Login Successful");
+          window.location.assign("https://www.facebook.com");
+        } else {
+          alert("Wrong username or password, Please re-try");
+          document.getElementsByClassName("input")[0].value = "";
+          document.getElementsByClassName("input")[1].value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

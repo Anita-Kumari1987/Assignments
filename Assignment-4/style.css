@@ -1,0 +1,12 @@
+  #inputContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .input{
+    width : 200px;
+    margin: 10px;
+  }
+  #btn{
+    width: 100px;
+    margin-left: 50px;
+  }
