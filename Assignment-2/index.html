@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
-        const numbers = [10, 20, 30, 40, 50];
-            let user = Number(prompt("enter your lucky number :"))
- 
-            let result = numbers.includes(user)
- 
-            console.log(result);
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numbers = [10, 25, 30, 45, 50, 100, 202];
+      let user = Number(prompt("enter your lucky number :"));
+      let result = numbers.includes(user);
+      console.log(result);
+      if (!result) {
+        user = Number(prompt("Sorry, Your number doesn't match. Try again"));
+        result = numbers.includes(user);
+      }
+      result
+        ? window.alert("Congratulations!! You are the lucky winner")
+        : null;
+
+      // const numbers = [10, 25, 30, 45, 50, 100, 202];
+      // let user = Number(prompt("Enter your lucky number:"));
+      // let result = numbers.includes(user)
+      //   ? true
+      //   : numbers.includes(
+      //       (user = Number(
+      //         prompt("Sorry, your number doesn't match. Try again")
+      //       ))
+      //     );
+
+      // result
+      //   ? window.alert("Congratulations!! You are the lucky winner")
+      //   : null;
+    </script>
+  </body>
 </html>
