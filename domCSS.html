@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0px;
+            }
+
+            :root {
+
+                --bgcolor: rgb(3, 113, 113)
+            }
+
+            .box {
+                width: 200px;
+                height: 50vh;
+
+                position: relative;
+                left: 50px;
+                transition: 0.5s ease-in-out;
+
+            }
+
+            .bgcolor1 {
+
+                background-color: var(--bgcolor);
+
+            }
+
+            .bgcolor {
+                background-color: rgb(140, 8, 56);
+            }
+
+            .active {
+                transform: scaleX(1.5);
+            }
+
+            .header {
+                width: 50%;
+                height: 200px;
+                background-color: rgb(119, 130, 139);
+                margin: auto;
+                display: none;
+
+            }
+
+            .headerShow {
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header"> </div>
+        <div class="box bgcolor1 bgcolor"></div>
+        <button type="button">mega Menu</button>
+
+
+
+
+
+
+
+        <script>
+
+            let serverData = " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quia distinctio aut debitis ex, esse fuga neque illum vero magnam minus veritatis at natus ipsam illo nesciunt nihil eius! Quas."
+
+            let header = document.querySelector(".header")
+
+            let heading = document.createElement("h1")
+            // console.log(heading);
+
+            Object.assign(header.style, {
+
+                backGroundColor: "red"
+
+            })
+
+
+
+            heading.innerText = serverData
+            header.appendChild(heading)
+
+            const show = () => {
+                let menu = document.querySelector(".box")
+                menu.classList.remove("bgcolor")
+                header.classList.add("headerShow")
+                menu.classList.add("active")
+
+
+
+            }
+
+            document.querySelector("button").addEventListener("click", show)
+
+        </script>
+
+    </body>
+
+</html>
