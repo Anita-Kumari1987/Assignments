@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="containerDiv"></div>
+    <script>
+      let mainContainer = document.querySelector(".containerDiv");
+      let dropdownContainer = document.createElement("select");
+      dropdownContainer.innerText = "Please select the roll number";
+      mainContainer.appendChild(dropdownContainer);
+
+      let infoContainer = document.createElement("div");
+      dropdownContainer.insertAdjacentElement("afterend", infoContainer);
+
+      // let infoContainerHeading = document.createElement("h2");
+      // infoContainerHeading.innerText = "Student Information";
+      // infoContainer.appendChild(infoContainerHeading);
+
+      // let studentName = document.createElement("h3");
+      // studentName.innerText = "Student Name : ";
+      // infoContainerHeading.insertAdjacentElement("afterend", studentName);
+
+      let defaultOption = document.createElement("option");
+      defaultOption.text = "Please select the number";
+      defaultOption.disabled = true;
+      defaultOption.selected = true;
+      dropdownContainer.appendChild(defaultOption);
+
+      let studentsRollNumber = [10, 20, 30, 40];
+      studentsRollNumber.forEach((number) => {
+        let option = document.createElement("option");
+        option.value = number;
+        option.innerText = number;
+        option.classList.add("optionList");
+        dropdownContainer.appendChild(option);
+      });
+
+      //Creating information section---------
+
+      dropdownContainer.addEventListener("change", () => {
+        if (dropdownContainer.value == 20) {
+          infoContainer.style.backgroundColor = "green";
+          infoContainer.innerHTML = `<h2> Student Information</h2>
+      <h3>Student name : Anita Kumari</h3> 
+      <p> Student Roll Number : 90089</p>
+      <p>Student Contact Number : 0769687654</p> 
+      <p>Student Email Address : anita6068@gmail.com</p>
+      <p> Hobbies : Sketching, listening music</p>`;
+        } else if (dropdownContainer.value == 30) {
+          infoContainer.style.backgroundColor = "yellow";
+          infoContainer.innerHTML = `<h2> Student Information</h2>
+      <h3>Student name : Sumit Kumar</h3> 
+      <p> Student Roll Number : 1005</p>
+      <p>Student Contact Number : 0769888654</p> 
+      <p>Student Email Address : sumit@gmail.com</p>
+      <p> Hobbies : Coding, ldriving</p>`;
+        } else if (dropdownContainer.value == 40) {
+          infoContainer.style.backgroundColor = "blue";
+          infoContainer.innerHTML = `<h2> Student Information</h2>
+      <h3>Student name : Ayansh Kashyap</h3> 
+      <p> Student Roll Number : 1004</p>
+      <p>Student Contact Number : 0000000054</p> 
+      <p>Student Email Address : example@gmail.com</p>
+      <p> Hobbies : Watching, Playing</p>`;
+        } else {
+          infoContainer.style.backgroundColor = "orange";
+          infoContainer.innerHTML = `<h2> Student Information</h2>
+      <h3>Student name : Shreyansh Kashyap</h3> 
+      <p> Student Roll Number : 1002</p>
+      <p>Student Contact Number : 9999999999</p> 
+      <p>Student Email Address : example2@gmail.com</p>
+      <p> Hobbies : Watching, Playing</p>`;
+        }
+      });
+    </script>
+  </body>
+</html>
