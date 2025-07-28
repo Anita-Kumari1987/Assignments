@@ -1,0 +1,15 @@
+.dflex {
+  display: flex;
+  padding: 50px;
+}
+.rightVideo,
+.videoInformation {
+  height: 200px;
+  width: 50%;
+}
+.banner {
+  background-color: rgb(40, 115, 40);
+}
+.banner {
+  background-color: rgb(164, 10, 105);
+}
