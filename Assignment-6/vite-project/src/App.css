@@ -1,0 +1,25 @@
+.navBarContainer{
+  display: flex;
+ gap: 2rem;
+ margin: 2rem;
+}
+
+input{
+  width: 50rem;
+  border-radius: 2.5rem;
+  height: 2.4rem;
+}
+
+.linksContainer{
+  gap: 2rem;
+}
+.link{
+  margin-right: 2rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.logoContainer{
+  display: flex;
+  gap: 0.8rem;
+  
+}
