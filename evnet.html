@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <!-- <h1 onclick="message()">show me some message </h1> -->
+        <h1 id="message">show me some message </h1>
+
+        <input type="text" name="username" id="uname">
+        <button type="button" id="btn">Show User Name</button>
+
+
+        <script>
+
+            // let message = () => {
+
+            //     window.alert("hi i am here!")
+
+            // }
+
+            // let getusername = () => {
+            //     let username = document.querySelector("#uname").value
+            //     window.alert(username)
+            // }
+
+
+
+            // console.log(username);
+            // let userbutton = document.querySelector("#btn")
+
+            // userbutton.addEventListener("click", getusername)
+
+
+
+            // messageClick.addEventListener("click", () => {
+
+            //     window.alert("hi i am here!")
+
+            // })
+
+            const numbers = [10, 60, 25, 80, 5];
+
+            const result = numbers.filter(num => num > 50);
+
+            let userbutton = document.querySelector("#btn")
+            userbutton.addEventListener("click", function getusername() {
+
+                window.alert(result)
+
+            }
+            )
+
+
+
+
+
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Bubbling</title>
+        <style>
+            body,
+            div,
+            button {
+                margin: 10px;
+                padding: 10px;
+                border: 2px solid black;
+                display: block;
+            }
+
+            body {
+                border-color: red;
+            }
+
+            div {
+                border-color: blue;
+            }
+
+            button {
+                border-color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+        (body - grandparent)
+        <div id="parent">
+            (div - parent)
+            <button id="child">Click Me (child)</button>
+        </div>
+
+        <script>
+            const parent = document.getElementById('parent');
+            const child = document.getElementById('child');
+
+            // Add click listeners to all three elements
+            document.body.addEventListener('click', () => {
+                // console.log(e);
+                console.log('Body (Grandparent) was clicked!');
+            });
+
+            parent.addEventListener('click', () => {
+                console.log('Div (Parent) was clicked!');
+            });
+
+            child.addEventListener('click', (e) => {
+                e.stopPropagation()
+                // event.stopPropagation(); // This stops the event from bubbling up
+                console.log('Button (Child) was clicked! Bubbling stopped.');
+            });
+        </script>
+    </body>
+
+</html>

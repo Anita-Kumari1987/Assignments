@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+
+
+
+            const sum = () => {
+
+                window.alert("this is arrow fucntion")
+            }
+
+            sum()
+
+            let multiply = (a, b) => {
+                return b * b
+            }
+
+            let res = multiply(5, 5)
+            window.alert(res)
+
+
+            // --------------------------
+
+
+            let minus = function (a, b) {
+
+                return a - b
+            }
+
+            let minusResult = minus(10, 5)
+
+            window.alert(minusResult)
+
+
+                // -----------------------------
+
+                (
+
+                    function (a, b) {
+
+                        return res = a - b
+
+                    }
+
+
+
+
+
+                )(50, 10)
+
+
+
+
+            // function sum() {
+
+            // }
+
+
+
+
+
+            function sum(a, ...b) {
+
+                let result = a + b
+
+                console.log(b);
+                // window.alert(result)
+
+                return result
+
+
+
+
+            }
+
+            // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            // let adata = Number(prompt("enter second digit;"))
+
+            // let userdata = sum(adata, numbers)
+            // window.alert(userdata)
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+
+</html>
